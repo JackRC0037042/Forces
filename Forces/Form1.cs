@@ -53,9 +53,30 @@ namespace Forces
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            //declare variables for Force and Angle
+            double Force, Angle;
+            
+            
             // Read values from textboxes
-            double Force = double.Parse(textBox1.Text);
-            double Angle = double.Parse(textBox2.Text);
+            try
+            {
+                Force = double.Parse(textBox1.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Type a number ye smelly nob ed");
+                Force = 0.0;
+            }
+
+            try
+            {
+                Angle = double.Parse(textBox2.Text);
+            }
+            catch
+            {
+                MessageBox.Show("cal stinks");
+                Angle = 0.0;
+            }
 
             //Calculate Fx and Fy
             double Fx = Force * cos(Angle);
@@ -65,6 +86,6 @@ namespace Forces
             label1.Text = "Fx = " + Fx + " N";
             label2.Text = "Fy = " + Fy + " N";
         }
-
+                                                                                                                                   
     }
 }

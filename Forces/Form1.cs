@@ -57,7 +57,7 @@ namespace Forces
             double Force, Angle;
             
             
-            // Read values from textboxes
+            // Read values from textboxes fghUWEB
             try
             {
                 Force = double.Parse(textBox1.Text);
